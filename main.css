@@ -1,0 +1,62 @@
+body{
+    background-image: linear-gradient(to left,red,green,blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+}
+#loading{
+    width: 350px;
+    height: 350px;
+    border-top: 35px solid lightgreen;
+    border-radius: 50%;
+    position: relative;
+    animation: animation-1 3.3s linear infinite;
+}
+@keyframes animation-1{
+    to{
+        transform: rotate(360deg);
+    }
+}
+#loading::before,#loading::after{
+    content: "";
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    border-radius: 50%;
+}
+#loading::before{
+    transform: rotate(120deg);
+    border-top: 35px solid lightskyblue;
+}
+#loading::after{
+    transform: rotate(240deg);
+    border-top: 35px solid lightseagreen;
+}
+#loading h1{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    animation: animation-2 3.3s linear infinite;
+}
+@keyframes animation-2{
+    to{
+        transform: rotate(-360deg);
+    }
+    0%{
+        color: lightseagreen;
+    }
+    50%{
+      
+        color: lightskyblue;
+    }
+    100%{
+        color: lightgreen;
+    }
+}
